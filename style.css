@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.todo-app {
+    width: 100%;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#input-box {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1d72b8;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #155a8a;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-right: 90px;
+}
+
+ul li:hover {
+    background: #f1f1f1;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Removed ::after for '×' to prevent duplicates */
+ul li::after {
+    content: '';
+}
+
+/* Delete button */
+.delete {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Edit button */
+.edit {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Optional: style for an input field when editing a task */
+.edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
